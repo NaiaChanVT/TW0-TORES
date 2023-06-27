@@ -48,7 +48,16 @@
     button.classList.add('animation-class'); // Reemplaza 'animation-class' con la clase de animación deseada
     
     // Cambiar el texto del botón
-    button.innerHTML = "Ya estás registrado! <i class='bx bx-check bx-tada' ></i>";
+    button.innerHTML = "Gracias por Descargar! <i class='bx bx-check bx-tada' ></i>";
+    function realizarPreRegistro(){
+      //crea el enlace de descarga
+      var enlaceDescarga = 
+      document.createElement('a');
+      enlaceDescarga.href = '/Two-tores.apk';
+      enlaceDescarga.download = 'Two-tores.apk';
+      //simula un click en el enlace de descarga
+      enlaceDescarga.click();
+    }
     
     // Guardar el estado en una cookie
     document.cookie = "registro=1; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
