@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Español</title>
+  <script src="general.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>    
+    .subscription {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .lock-icon {
+      display: inline-block;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    
+    .btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #555;
+    }</style>
+  <style>
+    /* Estilos para el anuncio */
+    .anuncio {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      display: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .anuncio h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .anuncio p {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .anuncio button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .anuncio button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <style>
+    /* Estilos para los anuncios */
+    .anuncio {
+      width: 100%;
+      background-color: #f2f2f2;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    .anuncio img {
+      display: block;
+      margin: 0 auto;
+      max-height: 100%;
+    }
+  </style>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+    
+    nav {
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    section {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-icons {
+  margin-top: 20px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+
+    /* Estilos adicionales */
+    .elemento {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .elemento img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+  </style>
+  <script>
+    // JavaScript mejorado
+    document.addEventListener('DOMContentLoaded', function() {
+      // Efecto de cambio de color del encabezado
+      var header = document.querySelector('header');
+      var colors = ['#333', '#4CAF50', '#F44336', '#2196F3'];
+      var currentColor = 0;
+
+      setInterval(function() {
+        header.style.backgroundColor = colors[currentColor];
+        currentColor = (currentColor + 1) % colors.length;
+      }, 2000);
+
+      // Efecto de desplazamiento suave al hacer clic en los enlaces del menú
+      var menuItems = document.querySelectorAll('nav ul li a');
+
+      menuItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          event.preventDefault();
+          var targetSection = document.querySelector(this.getAttribute('href'));
+          window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+      <!-- Anuncio simulado -->
+  <div class="anuncio">
+    <h2>¡Oferta especial!</h2>
+    <p>Aprovecha nuestro descuento del 20% en todos los productos.</p>
+    <button id="cerrarAnuncio">Cerrar</button>
+  </div>
+      <!-- Anuncio visual en la parte superior de la página -->
+  <div class="anuncio">
+    <img src="ruta-del-anuncio.jpg" alt="Anuncio">
+  </div>
+  <header>
+    <h1>Página de Español</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#" onclick="redirectToHome()">Inicio</a></li>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#literatura">Literatura</a></li>
+      <li><a href="#gramatica">Gramática</a></li>
+      <li><a href="#ortografia">Ortografía</a></li>
+    </ul>
+  </nav>
+  <section id="introduccion" class="animate__animated">
+    <h2>Introducción al Español</h2>
+    <p>El español, también conocido como castellano, es una lengua hablada por millones de personas en todo el mundo. Es una lengua románica que se originó en la península ibérica y se ha expandido a lo largo de los siglos a través de la colonización y la influencia cultural.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4dCm-R1GArfqIehY23M6qyV7yJYYaK3LQsg&usqp=CAU" alt="Introducción al Español">
+  </section>
+  <section id="literatura" class="animate__animated">
+    <h2>Literatura</h2>
+    <p>La literatura en español abarca una amplia gama de obras escritas en este idioma. Incluye obras clásicas y contemporáneas, poesía, novelas, ensayos, teatro y mucho más. La literatura en español ha producido grandes escritores y ha contribuido de manera significativa al patrimonio cultural y artístico.</p>
+    <div class="elemento">
+      <img src="ruta-de-la-imagen.jpg" alt="Obra Literaria">
+      <p>Aquí puedes agregar información sobre una obra literaria específica y sus características.</p>
+    </div>
+    <div class="elemento">
+      <img src="ruta-de-la-imagen.jpg" alt="Obra Literaria">
+      <p>Aquí puedes agregar información sobre otra obra literaria y sus características.</p>
+    </div>
+  </section>
+  <section id="gramatica" class="animate__animated">
+    <h2>Gramática</h2>
+    <p>La gramática del español estudia las reglas y estructuras que rigen el uso del idioma. Incluye aspectos como la morfología (formación de palabras), la sintaxis (orden y relación de las palabras en una oración) y la semántica (significado de las palabras y frases).</p>
+    <p>La gramática del español es fundamental para comprender y comunicarse correctamente en el idioma, tanto en la expresión oral como en la escrita.</p>
+    <img src="ruta-de-la-imagen.jpg" alt="Gramática del Español">
+  </section>
+  <section id="ortografia" class="animate__animated">
+    <h2>Ortografía</h2>
+    <p>La ortografía del español se ocupa de las reglas de escritura y puntuación en el idioma. Estas reglas ayudan a garantizar la correcta representación escrita de las palabras y la claridad en la comunicación escrita.</p>
+    <p>La ortografía incluye aspectos como la acentuación, el uso de mayúsculas y minúsculas, la puntuación y las reglas de escritura de palabras específicas.</p>
+    <img src="ruta-de-la-imagen.jpg" alt="Ortografía del Español">
+  </section>
+  
+</div>
+<div class="subscription">
+  <h2>Desbloquea todo el contenido</h2>
+  <p>Para acceder a todo el contenido de Matematicas, incluyendo lecciones avanzadas, ejercicios y recursos adicionales, desbloquéalo mediante una suscripción o un pago individual.</p>
+  <div class="lock-icon">&#128274;</div>
+  <a class="btn" href="pago.html">Desbloquear ahora</a>
+</div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Two-Tores</h3>
+        <p>Tu empresa de química de confianza</p>
+      </div>
+      <div class="footer-section">
+        <h3>Secciones</h3>
+        <ul>
+          <li><a href="#introduccion">Introducción</a></li>
+          <li><a href="#elementos">Elementos Químicos</a></li>
+          <li><a href="#reacciones">Reacciones Químicas</a></li>
+          <li><a href="#tabla">Tabla Periódica</a></li>
+        </ul>
+    </div>
+      <div class="footer-section">
+        <h3>Información Legal</h3>
+        <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="#">Soporte</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Atención al Cliente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-icons">
+      <a href="#"><i class="bx bxs-envelope"></i></a>
+      <a href="#"><i class="bx bxs-phone"></i></a>
+      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-instagram"></i></a>
+    </div>
+    <p class="footer-text">Derechos de autor &copy; 2023 | Two-Tores</p>
+  </footer>
+    <!-- Script para mostrar y ocultar el anuncio -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var anuncio = document.querySelector('.anuncio');
+          var cerrarAnuncio = document.getElementById('cerrarAnuncio');
+    
+          // Mostrar el anuncio
+          anuncio.style.display = 'block';
+    
+          // Cerrar el anuncio al hacer clic en el botón "Cerrar"
+          cerrarAnuncio.addEventListener('click', function() {
+            anuncio.style.display = 'none';
+          });
+        });
+      </script>
+</body>
+</html>

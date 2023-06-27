@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Química</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+    
+    nav {
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    section {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-icons {
+  margin-top: 20px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+
+    /* Estilos adicionales */
+    .elemento {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .elemento img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+  </style>
+  <script>
+    // JavaScript mejorado
+    document.addEventListener('DOMContentLoaded', function() {
+      // Efecto de cambio de color del encabezado
+      var header = document.querySelector('header');
+      var colors = ['#333', '#4CAF50', '#F44336', '#2196F3'];
+      var currentColor = 0;
+
+      setInterval(function() {
+        header.style.backgroundColor = colors[currentColor];
+        currentColor = (currentColor + 1) % colors.length;
+      }, 2000);
+
+      // Efecto de desplazamiento suave al hacer clic en los enlaces del menú
+      var menuItems = document.querySelectorAll('nav ul li a');
+
+      menuItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          event.preventDefault();
+          var targetSection = document.querySelector(this.getAttribute('href'));
+          window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Página de Química</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#elementos">Elementos Químicos</a></li>
+      <li><a href="#reacciones">Reacciones Químicas</a></li>
+      <li><a href="#tabla">Tabla Periódica</a></li>
+    </ul>
+  </nav>
+
+  <section id="introduccion">
+    <h2>Introducción a la Química</h2>
+    <p>La química es la ciencia que estudia la materia, su estructura, propiedades, composición y las transformaciones que experimenta. Es una disciplina fundamental que nos ayuda a comprender el mundo que nos rodea.</p>
+  </section>
+
+  <section id="elementos">
+    <h2>Elementos Químicos</h2>
+    <p>Los elementos químicos son las sustancias más simples y fundamentales que existen. En la naturaleza, se conocen 118 elementos, cada uno con sus propiedades únicas y características.</p>
+  </section>
+
+  <section id="reacciones">
+    <h2>Reacciones Químicas</h2>
+    <p>Las reacciones químicas implican la transformación de una o más sustancias en nuevas sustancias. Estas transformaciones ocurren debido a cambios en los enlaces químicos y la redistribución de los átomos.</p>
+  </section>
+
+  <section id="tabla">
+    <h2>Tabla Periódica</h2>
+    <p>La tabla periódica de los elementos es una herramienta esencial para los químicos. Organiza todos los elementos conocidos en filas y columnas según sus propiedades químicas y características.</p>
+    <p>La tabla periódica proporciona información sobre la configuración electrónica, el peso atómico, la valencia y otras propiedades importantes de los elementos. También muestra tendencias y patrones periódicos en las propiedades de los elementos.</p>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Two-Tores</h3>
+        <p>Tu empresa de química de confianza</p>
+      </div>
+      <div class="footer-section">
+        <h3>Secciones</h3>
+        <ul>
+          <li><a href="#introduccion">Introducción</a></li>
+          <li><a href="#elementos">Elementos Químicos</a></li>
+          <li><a href="#reacciones">Reacciones Químicas</a></li>
+          <li><a href="#tabla">Tabla Periódica</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Información Legal</h3>
+        <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="#">Soporte</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Atención al Cliente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-icons">
+      <a href="#"><i class="bx bxs-envelope"></i></a>
+      <a href="#"><i class="bx bxs-phone"></i></a>
+      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-instagram"></i></a>
+    </div>
+    <p class="footer-text">Derechos de autor &copy; 2023 | Two-Tores</p>
+  </footer>
+</body>
+</html>

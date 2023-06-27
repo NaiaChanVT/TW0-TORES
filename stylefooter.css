@@ -1,0 +1,124 @@
+/* Estilos para el pie de página */
+footer {
+  background-color: #f2f2f2;
+  padding: 30px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-links li {
+  margin-right: 20px;
+      font-size: 2rem; /* o cualquier otro valor deseado */
+}
+
+.footer-links a {
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #1abc9c;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      font-size: 2rem; /* o cualquier otro valor deseado */
+}
+
+.footer-social a {
+  margin: 0 10px;
+}
+
+.footer-payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-payment p {
+  margin-right: 10px;
+}
+
+.footer-payment i {
+  font-size: 28px;
+  margin-right: 10px;
+  color: #4a4a4a;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+/* Estilos para el pie de página en dispositivos móviles */
+@media only screen and (max-width: 600px) {
+
+  footer {
+    padding: 20px 0;
+    font-size: 12px;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .footer-logo {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-logo img {
+    max-width: 80px;
+  }
+
+  .footer-links {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+        font-size: 2rem; /* o cualquier otro valor deseado */
+  }
+
+  .footer-links li {
+    margin: 0 10px;
+   align-items: center;
+  }
+
+  .footer-social {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem; /* o cualquier otro valor deseado */
+  }
+
+
+  .footer-payment {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+}

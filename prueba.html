@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Química</title>
+  <script src="general.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>    
+    .subscription {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .lock-icon {
+      display: inline-block;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    
+    .btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #555;
+    }</style>
+  <style>
+    /* Estilos para el anuncio */
+    .anuncio {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      display: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .anuncio h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .anuncio p {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .anuncio button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .anuncio button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <style>
+    /* Estilos para los anuncios */
+    .anuncio {
+      width: 100%;
+      background-color: #f2f2f2;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    .anuncio img {
+      display: block;
+      margin: 0 auto;
+      max-height: 100%;
+    }
+  </style>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+    
+    nav {
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    section {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-icons {
+  margin-top: 20px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+
+    /* Estilos adicionales */
+    .elemento {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .elemento img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+  </style>
+  <script>
+    // JavaScript mejorado
+    document.addEventListener('DOMContentLoaded', function() {
+      // Efecto de cambio de color del encabezado
+      var header = document.querySelector('header');
+      var colors = ['#333', '#4CAF50', '#F44336', '#2196F3'];
+      var currentColor = 0;
+
+      setInterval(function() {
+        header.style.backgroundColor = colors[currentColor];
+        currentColor = (currentColor + 1) % colors.length;
+      }, 2000);
+
+      // Efecto de desplazamiento suave al hacer clic en los enlaces del menú
+      var menuItems = document.querySelectorAll('nav ul li a');
+
+      menuItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+          event.preventDefault();
+          var targetSection = document.querySelector(this.getAttribute('href'));
+          window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+      <!-- Anuncio simulado -->
+  <div class="anuncio">
+    <h2>¡Oferta especial!</h2>
+    <p>Aprovecha nuestro descuento del 20% en todos los productos.</p>
+    <button id="cerrarAnuncio">Cerrar</button>
+  </div>
+      <!-- Anuncio visual en la parte superior de la página -->
+  <div class="anuncio">
+    <img src="ruta-del-anuncio.jpg" alt="Anuncio">
+  </div>
+  <header>
+    <h1>Página de Química</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#" onclick="redirectToHome()">Home</a></li>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#elementos">Elementos Químicos</a></li>
+      <li><a href="#reacciones">Reacciones Químicas</a></li>
+      <li><a href="#tabla">Tabla Periódica</a></li>
+    </ul>
+  </nav>
+  
+
+
+  <section id="introduccion" class="animate__animated">
+    <h2>Introducción a la Química</h2>
+    <p>La química es una ciencia que estudia la composición, estructura, propiedades y transformaciones de la materia. Es una disciplina fundamental para entender el mundo que nos rodea y tiene aplicaciones en diversos campos como la medicina, la industria, la energía y el medio ambiente.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcKhFPDk_ws2ehekMeFnJf6EpLSbIjIyz6g&usqp=CAU" alt="Introducción a la Química">
+  </section>
+  
+  <section id="elementos" class="animate__animated">
+    <h2>Elementos Químicos</h2>
+    <p>Los elementos químicos son las sustancias más simples y fundamentales que existen. Cada elemento está compuesto por átomos que tienen el mismo número de protones en su núcleo. En la naturaleza, se conocen 118 elementos, y cada uno tiene propiedades únicas y distintas.</p>
+    <div class="elemento">
+      <img src="ruta-de-la-imagen.jpg" alt="Elemento Químico">
+      <p>Aquí puedes agregar información sobre un elemento químico específico y sus propiedades.</p>
+    </div>
+    <div class="elemento">
+      <img src="ruta-de-la-imagen.jpg" alt="Elemento Químico">
+      <p>Aquí puedes agregar información sobre otro elemento químico y sus propiedades.</p>
+    </div>
+  </section>
+  
+  <section id="reacciones" class="animate__animated">
+    <h2>Reacciones Químicas</h2>
+    <p>Las reacciones químicas son procesos en los cuales los átomos se rearrangan y forman nuevas sustancias. Durante una reacción química, los enlaces entre los átomos pueden romperse y formarse en diferentes configuraciones, lo que da lugar a cambios en las propiedades de las sustancias involucradas.</p>
+    <p>Existen diferentes tipos de reacciones químicas, como las reacciones de combinación, descomposición, sustitución y oxidación-reducción. Estas reacciones se rigen por las leyes de la conservación de la masa y la conservación de la energía.</p>
+    <img src="ruta-de-la-imagen.jpg" alt="Reacción Química">
+  </section>
+  
+  <section id="tabla" class="animate__animated">
+    <h2>Tabla Periódica</h2>
+    <p>La tabla periódica de los elementos es una herramienta fundamental en la química. Organiza todos los elementos conocidos en filas horizontales llamadas períodos y columnas verticales llamadas grupos. Cada elemento tiene una posición única en la tabla que está determinada por su número atómico y sus propiedades químicas.</p>
+    <p>La tabla periódica proporciona información sobre la configuración electrónica, el peso atómico, la valencia y otras propiedades importantes de los elementos. También se utiliza para predecir y comprender las tendencias periódicas en las propiedades físicas y químicas de los elementos.</p>
+    <img src="ruta-de-la-imagen.jpg" alt="Tabla Periódica">
+  </section>
+  
+</div>
+<div class="subscription">
+  <h2>Desbloquea todo el contenido</h2>
+  <p>Para acceder a todo el contenido de Matematicas, incluyendo lecciones avanzadas, ejercicios y recursos adicionales, desbloquéalo mediante una suscripción o un pago individual.</p>
+  <div class="lock-icon">&#128274;</div>
+  <a class="btn" href="pago.html">Desbloquear ahora</a>
+</div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Two-Tores</h3>
+        <p>Tu empresa de química de confianza</p>
+      </div>
+      <div class="footer-section">
+        <h3>Secciones</h3>
+        <ul>
+          <li><a href="#introduccion">Introducción</a></li>
+          <li><a href="#elementos">Elementos Químicos</a></li>
+          <li><a href="#reacciones">Reacciones Químicas</a></li>
+          <li><a href="#tabla">Tabla Periódica</a></li>
+        </ul>
+    </div>
+      <div class="footer-section">
+        <h3>Información Legal</h3>
+        <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="#">Soporte</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Atención al Cliente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-icons">
+      <a href="#"><i class="bx bxs-envelope"></i></a>
+      <a href="#"><i class="bx bxs-phone"></i></a>
+      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-instagram"></i></a>
+    </div>
+    <p class="footer-text">Derechos de autor &copy; 2023 | Two-Tores</p>
+  </footer>
+    <!-- Script para mostrar y ocultar el anuncio -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var anuncio = document.querySelector('.anuncio');
+          var cerrarAnuncio = document.getElementById('cerrarAnuncio');
+    
+          // Mostrar el anuncio
+          anuncio.style.display = 'block';
+    
+          // Cerrar el anuncio al hacer clic en el botón "Cerrar"
+          cerrarAnuncio.addEventListener('click', function() {
+            anuncio.style.display = 'none';
+          });
+        });
+      </script>
+</body>
+</html>

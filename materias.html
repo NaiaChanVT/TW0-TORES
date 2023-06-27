@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Materias</title>
+  <link rel="stylesheet" href="stylefooter.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+  /* Estilos CSS */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+
+  nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #555;
+  }
+
+  .home-btn {
+    margin-right: 10px;
+  }
+
+  /* Estilos específicos para las secciones */
+  #home {
+    background-color: #f4f4f4;
+  }
+
+  #home h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  #quimica,
+  #matematicas,
+  #espanol,
+  #fisica {
+    background-color: #fff;
+    margin-top: 20px;
+  }
+
+  #quimica h2,
+  #matematicas h2,
+  #espanol h2,
+  #fisica h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  #quimica p,
+  #matematicas p,
+  #espanol p,
+  #fisica p {
+    color: #555;
+  }
+
+  #quimica ul,
+  #matematicas ul,
+  #espanol ul,
+  #fisica ul {
+    margin-left: 20px;
+    color: #555;
+  }
+
+  #quimica ul li,
+  #matematicas ul li,
+  #espanol ul li,
+  #fisica ul li {
+    margin-bottom: 5px;
+  }
+
+  #quimica img,
+  #matematicas img,
+  #espanol img,
+  #fisica img {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>Página de Materias</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="/index.html" class="home-btn">Inicio</a></li>
+      <li><a href="/prueba.html">Química</a></li>
+      <li><a href="#matematicas">Matemáticas</a></li>
+      <li><a href="#espanol">Español</a></li>
+      <li><a href="#fisica">Física</a></li>
+    </ul>
+  </nav>
+  
+  <section id="home">
+    <h2>Bienvenido(a)</h2>
+    <p>Esta página web te ofrece recursos y material de estudio en diferentes materias.</p>
+    <img src="https://picsum.photos/1200/800" alt="Imagen de inicio" width="400">
+    <a class="btn" href="/index.html">Ir a Inicio</a>
+  </section>
+  
+  <section id="quimica">
+    <h2>Química</h2>
+    <p>La química es la ciencia que estudia la composición, estructura, propiedades y transformaciones de la materia.</p>
+    <p>Algunos temas importantes en química incluyen:</p>
+    <ul>
+      <li>Tabla periódica de los elementos</li>
+      <li>Reacciones químicas</li>
+      <li>Estequiometría</li>
+      <li>Propiedades de los compuestos</li>
+    </ul>
+    <img src="https://concepto.de/wp-content/uploads/2014/08/quimica-1-e1589576942464-800x400.jpg" alt="Imagen de Química" width="400">
+    <a class="btn" href="/prueba.html">Ir a Química</a>
+  </section>
+  
+  <section id="matematicas">
+    <h2>Matemáticas</h2>
+    <p>Las matemáticas son una disciplina que se encarga del estudio de las propiedades y las relaciones de los números, las figuras geométricas y los objetos abstractos.</p>
+    <p>Algunos temas importantes en matemáticas incluyen:</p>
+    <ul>
+      <li>Álgebra</li>
+      <li>Geometría</li>
+      <li>Cálculo</li>
+      <li>Probabilidad y estadística</li>
+    </ul>
+    <img src="https://concepto.de/wp-content/uploads/2013/08/matematicas-e1551990337130.jpg" alt="Imagen de Matemáticas" width="400">
+    <a class="btn" href="/matematicas.html">Ir a Matemáticas</a>
+  </section>
+  
+  <section id="espanol">
+    <h2>Español</h2>
+    <p>El español es una lengua hablada en numerosos países y es uno de los idiomas más hablados en el mundo.</p>
+    <p>Algunos temas importantes en español incluyen:</p>
+    <ul>
+      <li>Gramática y sintaxis</li>
+      <li>Comprensión de lectura</li>
+      <li>Redacción y ortografía</li>
+      <li>Literatura</li>
+    </ul>
+    <img src="https://img.freepik.com/vector-premium/aprender-espanol-concepto-lengua-extranjera-espanola-libros-texto-papeleria-cursos-clases-webinar-educacion-online-taller-educativo-lecciones-distancia-ilustracion-vectorial-dibujos-animados_87771-15785.jpg" alt="Imagen de Español" width="400">
+    <a class="btn" href="/espanol.html">Ir a Español</a>
+  </section>
+  
+  <section id="fisica">
+    <h2>Física</h2>
+    <p>La física es la ciencia que estudia las propiedades fundamentales de la materia y la energía, así como las interacciones entre ellas.</p>
+    <p>Algunos temas importantes en física incluyen:</p>
+    <ul>
+      <li>Mecánica</li>
+      <li>Termodinámica</li>
+      <li>Electricidad y magnetismo</li>
+      <li>Óptica</li>
+    </ul>
+    <img src="https://clasesytutores.com/wp-content/uploads/2021/07/FISICA.jpg" alt="Imagen de Física" width="400">
+    <a class="btn" href="/fisica.html">Ir a Física</a>
+  </section>
+  
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Two-tores logo">
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#"><i class='bx bx-loader-circle bx-spin' ></i></a></li>
+          <li><a href="#"><i class='bx bx-loader-circle bx-spin' ></i></a></li>
+          <li><a href="#"><i class='bx bx-loader-circle bx-spin' ></i></a></li>
+          <li><a href="#"><i class='bx bx-loader-circle bx-spin' ></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="/error404.html"><i class='bx-size bx bxl-facebook-circle'></i></a>
+        <a href="/error404.html"><i class='bx-size bx bxl-twitter' ></i></a>
+        <a href="/error404.html"><i class='bx-size bx bxl-instagram-alt' ></i></a>
+      </div>
+    </div>
+    <div class="footer-payment">
+      <p>Aceptamos:</p>
+      <i class='bx bx-credit-card'></i>
+      <i class='bx bxl-paypal'></i>
+      <i class='bx bx-bitcoin'></i>
+    </div>
+    <div class="footer-bottom">
+      <p>Todos los derechos reservados &copy; Two-tores</p>
+    </div>
+  </footer>
+</body>
+</html>
